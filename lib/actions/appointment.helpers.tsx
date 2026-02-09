@@ -1,4 +1,4 @@
-"use-server";
+"use server";
 
 import { Query } from "node-appwrite";
 import {
@@ -9,7 +9,9 @@ import {
 import { AvailabilityCheckResult } from "@/types/appwrite.types";
 import HandleAppwriteError from "./appwriteErrors";
 
-export const normalizeSchedule = (schedule: Date | string): string => {
+export const normalizeSchedule = async (
+  schedule: Date | string,
+): Promise<string> => {
   return typeof schedule === "string"
     ? new Date(schedule).toISOString()
     : schedule.toISOString();
