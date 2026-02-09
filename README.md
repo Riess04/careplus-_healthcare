@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### CAREPLUS HOME PAGE
 
-## Getting Started
+A Patient Form designed to be fast, accurate, and user-friendly, ensuring every patient has a smooth experience from the moment they start filling out their information.
 
-First, run the development server:
+## key features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🧩 Component reusability & DRY principles
+- 🛡️ Type safety (compile + runtime validation)
+- ⚡ Optimized form state management (React Hook Form)
+- 🚨 Comprehensive error handling with UX focus (try/catch blocks)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## CAREPLUS REGISTRATION PAGE
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Complete medical intake and registration system for new patients.Collects comprehensive patient collection, medical history, and identification documents before enabling appointment booking.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## key features
 
-## Learn More
+- 🎯 Smart Form Pre-population (Auto-fills user details from sign-up)
+- 📋 Comprehensive Medical Intake (Captures personal, medical, and insurance information)
+- 📎 Secure Document Upload (Drag-and-drop file handling for ID verification)
+- ✅ Real-time Form Validation (Instant feedback with Zod schema validation)
+- 🔄 Seamless Patient Flow (Auto-redirects to appointment booking upon completion)
 
-To learn more about Next.js, take a look at the following resources:
+- 🧩 Component reusability & DRY principles
+- 🛡️ Type safety (compile + runtime validation)
+- ⚡ Optimized form state management (React Hook Form)
+- 🚨 Comprehensive error handling with UX focus (try/catch blocks)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## CAREPLUS SUCCESS PAGE
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Displays appointment confirmation page with patient details, assigned doctor information, and appointment scheduling data. Includes async data fetching from Appwrite database and error handling for robust user experience.
 
-## Deploy on Vercel
+## Key features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ✅Appointment confirmation with success animation
+- 👨‍⚕️Doctor profile display (photo & name)
+- 📅Formatted appointment date/time
+- 🔄Quick re-booking functionality
+- 🛡️Error handling for database operations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## CAREPLUS ADMIN VERIFICATION
+
+Security modal component that protects admin routes with 6-digit passkey verification, handles user authentication, encrypted session storage, and automatic route redirection based on access validation.
+
+## key features
+
+- 🔐 Secure 6-digit OTP-style passkey input
+- 🔒 Encrypted local storage for session persistence
+- 🚨 Real-time validation with user-friendly error messages
+- 🔄 Automatic route protection and redirection handling
+
+<!-- [KEY QUESTIONS]
+
+### why does the onSubmit function need to be an async function during API calls?
+
+When communicating with external systems such as API'S and databases, async is JavaScript's way of handling operations that take time without freezing the user interface.Still keeping things fast and responsive for the user.
+
+### Purpose of Try/catch??
+
+Error Handling(network failures,server crashes,dtb downtime); ensures the app can continue running - upon recovery - without resulting in a crash even when external systems fail, and users get helpful feedback instead of technical error messages.
+
+### Purpose of process.env??
+
+Stores environment-specific configurations; configurations referring to values set outside code and vary by environment.
+ -->
+
+<!-- [NEW LEARNT KEY CONCEPTS]
+
+- Appwrite?? :
+
+  Baas platform that provides a complete backend (database, auth, storage, messaging, APIs) out of the box, so apps can be built faster without worrying about backend infrastructure.
+
+- React Hook Form??
+
+- Typescript interfaces,enums.??
+
+ENUMS : Enums allow a developer to define a set of named constants, making it easier to create a set of distinct cases. They work best in a closed set of known values that won't change frequently, and when values are referenced across multiple files.
+
+INTERFACE : Useful for defining object shapes and contracts(agreements about the shape and behavior of data)
+
+Key differences ?? Enums represent a set of fixed values, interfaces represent a structure that can be extended and merged. -->
