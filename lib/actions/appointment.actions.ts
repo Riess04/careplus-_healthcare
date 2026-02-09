@@ -20,7 +20,7 @@ export const CreateAppointment = async (
   appointment: CreateAppointmentParams,
 ) => {
   try {
-    const normalizedSchedule = normalizeSchedule(appointment.schedule);
+    const normalizedSchedule = await normalizeSchedule(appointment.schedule);
 
     const availabilityCheck = await checkAppointmentAvailability(
       appointment.primaryPhysician,
