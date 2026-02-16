@@ -1,6 +1,6 @@
 ### CAREPLUS HOME PAGE
 
-A Patient Form designed to be fast, accurate, and user-friendly, ensuring every patient has a smooth experience from the moment they start filling out their information.
+A Patient Form designed to be fast, accurate, and user-friendly, ensuring every patient has a smooth experience from start to finish.
 
 ## key features
 

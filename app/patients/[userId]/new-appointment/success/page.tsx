@@ -15,6 +15,7 @@ const RequestSuccess = async ({
   const appointmentId = (sp?.appointmentId as string) || "";
   const appointment = await getAppointment(appointmentId);
 
+  console.log("AppointmentId: ", appointmentId);
   const doctor = Doctors.find(
     (doc) => doc.name === appointment.primaryPhysician,
   );
