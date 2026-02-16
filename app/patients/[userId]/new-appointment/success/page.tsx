@@ -13,9 +13,19 @@ const RequestSuccess = async ({
   const { userId } = await params;
   const sp = await searchParams;
   const appointmentId = (sp?.appointmentId as string) || "";
-  const appointment = await getAppointment(appointmentId);
 
-  console.log("AppointmentId: ", appointmentId);
+  console.log("Search params:", sp);
+  console.log("Appointment ID:", appointmentId);
+  console.log("Is an appointment valid?", appointmentId.length > 0);
+
+  if (!appointmentId) {
+    console.error("No appointment ID found!");
+    return (
+      <div className="shad-danger-btn">Error:No appointment ID provided </div>
+    );
+  }
+
+  const appointment = await getAppointment(appointmentId);
   const doctor = Doctors.find(
     (doc) => doc.name === appointment.primaryPhysician,
   );
