@@ -14,10 +14,6 @@ const RequestSuccess = async ({
   const sp = await searchParams;
   const appointmentId = (sp?.appointmentId as string) || "";
 
-  console.log("Search params:", sp);
-  console.log("Appointment ID:", appointmentId);
-  console.log("Is an appointment valid?", appointmentId.length > 0);
-
   if (!appointmentId) {
     console.error("No appointment ID found!");
     return (
